@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Douglas Santana Mendonça — TI & Cibersegurança</title>
   <meta name="description" content="Portfólio de Douglas Santana Mendonça — Suporte de TI, Segurança da Informação e Análise de Dados. Consultor independente para clientes corporativos e jurídicos." />
-  <link rel="icon" href="favicon.ico" />
+  <link rel="icon" href="ico/favicon.ico" />
+  <link rel="canonical" href="https://sm-douglas.github.io/" />
 
   <!-- Fontes -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -15,9 +16,9 @@
   <!-- Ícones (Lucide via CDN) -->
   <script src="https://unpkg.com/lucide@1.39.0" crossorigin="anonymous"></script>
 
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="css/style.css" />
 
-  <!-- Tema (claro/escuro): aplicado antes da renderização para evitar "flash" -->
+  <!-- Tema (claro/escuro), aplicado antes do render para evitar "flash" -->
   <script>
     (function () {
       try {
@@ -29,6 +30,7 @@
   </script>
 </head>
 <body>
+  <a href="#conteudo" class="skip-link">Pular para o conteúdo</a>
   <!-- ================= NAVBAR ================= -->
   <header id="navbar" class="navbar">
     <nav class="nav container flex items-center justify-between">
@@ -43,7 +45,7 @@
         <li><a href="#projetos" data-nav>Projetos</a></li>
         <li><a href="#experiencia" data-nav>Experiência</a></li>
         <li><a href="#contato" data-nav>Contato</a></li>
-        <li><a href="curriculo.html">Currículo</a></li>
+        <li><a href="curriculo/">Currículo</a></li>
       </ul>
 
       <div class="nav-actions flex items-center">
@@ -58,12 +60,11 @@
   </header>
 
 
-  <main>
+  <main id="conteudo">
     <!-- ================= HERO ================= -->
     <section id="top" class="hero">
       <div class="container hero-grid flex flex-wrap">
         <div class="hero-text fade-in-up">
-          <p class="eyebrow flex items-center"><span class="line"></span> Portfólio · 2026</p>
           <h1 class="display">
             Douglas Santana <em>Mendonça</em>
           </h1>
@@ -81,7 +82,7 @@
             <a href="#contato" class="btn btn-primary">
               Entrar em contato <i data-lucide="arrow-right"></i>
             </a>
-            <a href="curriculo.html" class="btn btn-outline">
+            <a href="curriculo/" class="btn btn-outline">
               <i data-lucide="download"></i> Baixar CV
             </a>
           </div>
@@ -89,13 +90,11 @@
 
         <div class="hero-photo fade-in-up">
           <!--
-            Foto de retrato principal.
-            Recomendado: 1024x1280 (4:5), formato .jpg ou .webp.
-            Substituir: portfolio-static/assets/foto-hero.jpg
+            Foto de retrato principal, 1024x1280 (4:5), substituir: ./assets/foto-hero.jpg
           -->
           <figure>
             <div class="photo-frame"></div>
-            <img src="assets/foto-hero.jpg" alt="Retrato de Douglas Santana Mendonça" width="1024" height="1280" />
+            <img src="img/foto-hero.jpg" alt="Retrato de Douglas Santana Mendonça" width="1024" height="1280" />
           </figure>
         </div>
       </div>
@@ -116,11 +115,10 @@
         <div class="about-grid flex flex-wrap">
           <div class="about-photo">
             <!--
-              Foto secundária (mais informal / lifestyle).
-              Recomendado: 900x1050 (6:7). Substituir: portfolio-static/assets/foto-sobre.jpg
+              Foto secundária, 900x1050 (6:7). substituir: ./assets/foto-sobre.jpg
             -->
             <figure>
-              <img src="assets/foto-sobre.jpg" alt="Douglas Santana em ambiente profissional" loading="lazy" width="900" height="1050" />
+              <img src="img/foto-sobre.jpg" alt="Douglas Santana em ambiente profissional" loading="lazy" width="900" height="1050" />
               <figcaption>Escritório · Vitória, ES</figcaption>
             </figure>
           </div>
@@ -198,7 +196,7 @@
             </a>
           </li>
           <li>
-            <a href="casos/pericia-forense.html" class="project-row flex flex-wrap">
+            <a href="pericia-forense/" class="project-row flex flex-wrap">
               <span class="p-num">02</span>
               <div class="p-body">
                 <h3>Estudo de caso — Perícia forense <i data-lucide="arrow-up-right"></i></h3>
@@ -208,10 +206,10 @@
             </a>
           </li>
           <li>
-            <a href="casos/analise-rede-corporativa.html" class="project-row flex flex-wrap">
+            <a href="analise-rede-corporativa/" class="project-row flex flex-wrap">
               <span class="p-num">03</span>
               <div class="p-body">
-                <h3>Análise de rede corporativa <i data-lucide="arrow-up-right"></i></h3>
+                <h3>Estudo de caso — Análise de rede corporativa <i data-lucide="arrow-up-right"></i></h3>
                 <p>Captura e análise de tráfego com Wireshark para identificar anomalias e vazamento de credenciais em ambiente Windows / Active Directory.</p>
               </div>
               <div class="p-tags flex"><span>Wireshark</span><span>Active Directory</span><span>Blue Team</span></div>
@@ -237,17 +235,7 @@
         <p class="section-label"><span>04</span> Experiência</p>
 
         <ol class="timeline flex">
-          <li class="flex flex-wrap">
-            <p class="period timeline-period">2023 — presente</p>
-            <div class="timeline-content">
-              <h3>Consultor Independente — TI & Cibersegurança</h3>
-              <p class="org">Clientes jurídicos e corporativos</p>
-              <ul class="flex">
-                <li>Perícia forense digital e produção de laudos técnicos para processos judiciais.</li>
-                <li>Adequação à LGPD e resposta a incidentes em escritórios de advocacia.</li>
-              </ul>
-            </div>
-          </li>
+          
           <li class="flex flex-wrap">
             <p class="period timeline-period">2022 — presente</p>
             <div class="timeline-content">
@@ -262,8 +250,19 @@
           <li class="flex flex-wrap">
             <p class="period timeline-period">2023 — presente</p>
             <div class="timeline-content">
+              <h3>Consultor Independente — TI & Cibersegurança</h3>
+              <p class="org">Clientes jurídicos e corporativos</p>
+              <ul class="flex">
+                <li>Perícia forense digital e produção de laudos técnicos para processos judiciais.</li>
+                <li>Adequação à LGPD e resposta a incidentes em escritórios de advocacia.</li>
+              </ul>
+            </div>
+          </li>
+          <li class="flex flex-wrap">
+            <p class="period timeline-period">2023 — presente</p>
+            <div class="timeline-content">
               <h3>Analista de OSINT & Investigação Digital</h3>
-              <p class="org">Projetos sob NDA</p>
+              <p class="org">Projetos Especiais</p>
               <ul class="flex">
                 <li>Coleta e correlação de fontes abertas para investigações preliminares.</li>
                 <li>Scripts em Python para automatizar reconhecimento e enriquecimento de dados.</li>
@@ -287,8 +286,8 @@
 
           <div class="contact-links flex">
             <a href="mailto:contato.smdouglas@gmail.com" class="flex items-center justify-between"><i data-lucide="mail"></i> contato.smdouglas@gmail.com <span>→</span></a>
-            <a href="https://www.linkedin.com/in/douglas-santana-8b5263222" class="flex items-center justify-between"><i data-lucide="linkedin"></i> LinkedIn <span>→</span></a>
-            <a href="https://github.com/sm-douglas" class="flex items-center justify-between"><i data-lucide="github"></i> GitHub <span>→</span></a>
+            <a href="https://www.linkedin.com/in/douglas-santana-8b5263222" class="flex items-center justify-between"><i data-lucide="briefcase"></i> LinkedIn <span>→</span></a>
+            <a href="https://github.com/sm-douglas" class="flex items-center justify-between"><i data-lucide="code-2"></i> GitHub <span>→</span></a>
           </div>
         </div>
 
@@ -303,7 +302,7 @@
               <i data-lucide="mail"></i> Enviar e-mail
             </a>
             <a href="https://www.linkedin.com/in/douglas-santana-8b5263222" target="_blank" rel="noopener" class="btn btn-outline">
-              <i data-lucide="linkedin"></i> Falar no LinkedIn
+              <i data-lucide="briefcase"></i> Falar no LinkedIn
             </a>
           </div>
         </div>
@@ -317,6 +316,6 @@
     </section>
   </main>
 
-  <script src="script.js"></script>
+  <script src="js/script.js"></script>
 </body>
 </html>
