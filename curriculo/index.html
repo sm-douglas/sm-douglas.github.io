@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Currículo — Douglas Santana Mendonça</title>
+  <meta name="description" content="Currículo de Douglas Santana Mendonça — Suporte de TI (N1–N3), Segurança da Informação e conformidade LGPD. Visualize ou baixe o PDF." />
+  <link rel="icon" href="../ico/favicon.ico" />
+  <link rel="canonical" href="https://sm-douglas.github.io/curriculo/" />
+
+  <!-- Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Ícones (Lucide via CDN) -->
+  <script src="https://unpkg.com/lucide@1.39.0" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="../css/style.css" />
+
+  <!-- Tema (claro/escuro): aplicado antes do render para evitar "flash" -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("theme");
+        if (!t) t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        document.documentElement.setAttribute("data-theme", t);
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <a href="#conteudo" class="skip-link">Pular para o conteúdo</a>
+  <!-- ================= NAVBAR ================= -->
+  <header id="navbar" class="navbar">
+    <nav class="nav container flex items-center justify-between">
+      <a href="../" class="brand flex items-center">
+        <span class="brand-name">Douglas Santana</span>
+        <span class="brand-sep">· Mendonça</span>
+      </a>
+
+      <ul class="nav-links flex" id="navLinks">
+        <li><a href="../#sobre" data-nav>Sobre</a></li>
+        <li><a href="../#skills" data-nav>Competências</a></li>
+        <li><a href="../#projetos" data-nav>Projetos</a></li>
+        <li><a href="../#experiencia" data-nav>Experiência</a></li>
+        <li><a href="../#contato" data-nav>Contato</a></li>
+        <li><a href="./" class="active">Currículo</a></li>
+      </ul>
+
+      <div class="nav-actions flex items-center">
+        <button id="themeToggle" class="icon-btn" type="button" aria-label="Alternar tema">
+          <i data-lucide="moon"></i>
+        </button>
+        <button id="menuToggle" class="menu-toggle icon-btn" aria-label="Abrir menu">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="conteudo" class="cv-main">
+    <div class="container">
+
+      <!-- Navegação de retorno -->
+      <a href="../" class="case-back">
+        <i data-lucide="arrow-left"></i> Voltar para o início
+      </a>
+
+      <!-- Cabeçalho -->
+      <header class="cv-header">
+        <p class="case-num">Currículo · CV</p>
+        <h1 class="case-title">Currículo — Douglas Santana Mendonça</h1>
+        <p class="body-muted" style="max-width: 40rem; margin-top: 1rem;">
+          Suporte de TI (N1–N3), infraestrutura, segurança da informação e
+          conformidade LGPD. Visualize abaixo ou baixe a versão em PDF.
+        </p>
+        <div class="cv-actions flex flex-wrap">
+          <!--
+            Arquivo do currículo em PDF.
+            Coloque o seu PDF em: portfolio-static/assets/curriculo-douglas.pdf
+            (nome do arquivo: curriculo-douglas.pdf)
+          -->
+          <a href="../assets/curriculo-douglas.pdf" class="btn btn-primary" download>
+            <i data-lucide="download"></i> Baixar PDF
+          </a>
+          <a href="../#contato" class="btn btn-outline">
+            Entrar em contato <i data-lucide="arrow-right"></i>
+          </a>
+        </div>
+      </header>
+
+      <!-- Pré-visualização do PDF (mesmo arquivo: assets/curriculo-douglas.pdf) -->
+      <div class="cv-viewer">
+        <object data="assets/curriculo-douglas.pdf" type="application/pdf">
+          <div class="cv-fallback">
+            <p>O seu navegador não conseguiu exibir a pré-visualização do PDF.</p>
+            <a href="../assets/curriculo-douglas.pdf" class="btn btn-outline" download>
+              <i data-lucide="download"></i> Baixar o currículo em PDF
+            </a>
+          </div>
+        </object>
+      </div>
+
+      <footer class="container site-footer flex flex-wrap justify-between">
+        <span>© <span id="year"></span> Douglas Santana Mendonça</span>
+        <span>Todos os direitos reservados</span>
+      </footer>
+    </div>
+  </main>
+
+  <script src="../js/script.js"></script>
+</body>
+</html>

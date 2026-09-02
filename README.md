@@ -6,23 +6,44 @@ Versão em **HTML, CSS e JavaScript puro** (sem React, sem Tailwind, sem build).
 
 ```
 portfolio-static/
-├── index.html              # Marcação semântica (header, sections, footer)
-├── curriculo.html          # Página do CV — download e pré-visualização do PDF
-├── style.css                # Estilos com CSS custom properties (cores, fontes, espaçamentos)
-├── script.js                 # Navbar ativa, scroll, menu mobile, alternância de tema
-├── favicon.ico                # Ícone da aba do navegador
-├── casos/
-│   ├── pericia-forense.html            # Case 02 — Perícia forense digital
-│   └── analise-rede-corporativa.html   # Case 03 — Análise de rede corporativa
+├── index.html                       # Página inicial (URL: /)
+├── curriculo/
+│   └── index.html                   # Página do CV (URL: /curriculo/)
+├── pericia-forense/
+│   └── index.html                   # Case 02 (URL: /pericia-forense/)
+├── analise-rede-corporativa/
+│   └── index.html                   # Case 03 (URL: /analise-rede-corporativa/)
+├── curriculo.html                   # Redireciona para /curriculo/ (URL antiga)
+├── pericia-forense.html             # Redireciona para /pericia-forense/ (URL antiga)
+├── analise-rede-corporativa.html    # Redireciona para /analise-rede-corporativa/ (URL antiga)
+├── sobre.html                       # Redireciona para /#sobre (URL antiga indexada)
+├── sitemap.xml                      # Lista as URLs canônicas (limpas, sem .html)
+├── robots.txt                       # Aponta o crawler para o sitemap.xml
+├── css/
+│   └── style.css
+├── js/
+│   └── script.js
+├── ico/
+│   └── favicon.ico
+├── img/
+│   ├── foto-hero.jpg
+│   ├── foto-sobre.jpg
+│   └── imagem-0X-pericia.jpg / imagem-0X-rede.jpg   # placeholders em branco, ainda não usados em nenhuma página
 └── assets/
-    ├── foto-hero.jpg           # Retrato principal (recorte 4:5 aplicado via CSS)
-    ├── foto-sobre.jpg          # Foto secundária (recorte 6:7 aplicado via CSS)
-    └── curriculo-douglas.pdf   # Currículo em PDF (download + preview em curriculo.html)
+    └── curriculo-douglas.pdf
 ```
 
-Não há mais formulário de contato (removido — os canais diretos de e-mail e LinkedIn
-estão na seção "Contato") nem seção de evidências visuais nas páginas de caso (ainda
-sem imagens reais para publicar).
+## URLs limpas (sem `.html`)
+
+Cada página vive numa pasta com `index.html` dentro, então o GitHub Pages serve ela
+sem extensão (ex: `sm-douglas.github.io/curriculo/`). Os arquivos `.html` que ainda
+existem soltos na raiz são só *stubs* de redirecionamento (com
+`<meta http-equiv="refresh">` e `<link rel="canonical">`), mantidos para não quebrar
+links/bookmarks antigos e para o Google atualizar o índice para as novas URLs.
+
+Se for criar uma página nova, siga o mesmo padrão: uma pasta com `index.html` dentro,
+referenciando os recursos compartilhados com `../css/style.css`, `../js/script.js`,
+`../ico/favicon.ico` e `../img/...` / `../assets/...`.
 
 ## Como usar
 
@@ -35,8 +56,8 @@ python3 -m http.server 5173
 
 ## Personalizar
 
-- **Cores e tipografia:** edite as variáveis no topo de `style.css` (`:root`).
-- **Fotos e CV:** substitua os arquivos em `assets/` mantendo os mesmos nomes.
-- **Textos:** todo o conteúdo está em `index.html` (e em cada página de caso, dentro de `casos/`).
+- **Cores e tipografia:** edite as variáveis no topo de `css/style.css` (`:root`).
+- **Fotos e CV:** substitua os arquivos em `img/` e `assets/` mantendo os mesmos nomes.
+- **Textos:** todo o conteúdo está em `index.html` e em cada `index.html` dentro de `curriculo/`, `pericia-forense/` e `analise-rede-corporativa/`.
 - **Tema claro/escuro:** alternância via botão no header, com preferência salva em `localStorage`.
-- **Ícones:** biblioteca [Lucide](https://lucide.dev) via CDN, versão fixada em `1.39.0` — para trocar um ícone, use o nome em `data-lucide="..."`.
+- **Ícones:** biblioteca [Lucide](https://lucide.dev) via CDN, versão fixada em `1.39.0`.

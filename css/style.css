@@ -1,6 +1,6 @@
 /* ============================================
    Portfólio — Douglas Santana Mendonça
-   Estética corporativa/editorial. Vanilla CSS.
+   Estética corporativa/editorial, fiz usando Vanilla CSS.
    Layout em flexbox, escrito MOBILE-FIRST:
    o estilo base vale para celular e os
    @media (min-width: …) ampliam para telas maiores.
@@ -17,6 +17,7 @@
   --primary: #2f4a3f;      /* verde-petróleo sóbrio */
   --primary-hover: #263c33;
   --primary-fg: #f6f4ef;
+  --nav-bg: rgba(246, 244, 239, 0.92);
 
   /* Tipografia */
   --font-serif: "Fraunces", Georgia, "Times New Roman", serif;
@@ -141,7 +142,7 @@ input, textarea, select { font: inherit; max-width: 100%; }
   border-bottom: 1px solid transparent;
 }
 .navbar.scrolled {
-  background: rgba(246, 244, 239, 0.92);
+  background: var(--nav-bg);
   backdrop-filter: blur(10px);
   border-bottom-color: var(--hairline);
 }
@@ -858,6 +859,7 @@ input, textarea, select { font: inherit; max-width: 100%; }
   --primary: #8fae9f;
   --primary-hover: #a4c0b1;
   --primary-fg: #16181a;
+  --nav-bg: rgba(22, 24, 26, 0.92);
 }
 :root[data-theme="dark"] .photo-frame { opacity: 0.5; }
 :root[data-theme="dark"] img { filter: brightness(0.94); }
@@ -962,4 +964,23 @@ body,
   text-transform: uppercase;
   color: var(--muted);
   margin: 0 0 1.25rem;
+}
+
+/* -------- Skip link (acessibilidade) -------- */
+.skip-link {
+  position: absolute;
+  top: -48px;
+  left: 12px;
+  z-index: 1000;
+  background: var(--primary);
+  color: #fff;
+  padding: 10px 18px;
+  border-radius: 6px;
+  font-size: 14px;
+  font-weight: 500;
+  text-decoration: none;
+  transition: top 0.15s ease;
+}
+.skip-link:focus {
+  top: 12px;
 }

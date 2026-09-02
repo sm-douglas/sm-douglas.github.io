@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Página não encontrada — Douglas Santana Mendonça</title>
+  <meta name="robots" content="noindex" />
+  <link rel="icon" href="ico/favicon.ico" />
+
+  <!-- Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Ícones (Lucide via CDN) -->
+  <script src="https://unpkg.com/lucide@1.39.0" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="css/style.css" />
+
+  <!-- Tema (claro/escuro), aplicado antes do render para evitar "flash" -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("theme");
+        if (!t) t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        document.documentElement.setAttribute("data-theme", t);
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <a href="#conteudo" class="skip-link">Pular para o conteúdo</a>
+  <!-- ================= NAVBAR ================= -->
+  <header id="navbar" class="navbar">
+    <nav class="nav container flex items-center justify-between">
+      <a href="/" class="brand flex items-center">
+        <span class="brand-name">Douglas Santana</span>
+        <span class="brand-sep">· Mendonça</span>
+      </a>
+
+      <div class="nav-actions flex items-center">
+        <button id="themeToggle" class="icon-btn" type="button" aria-label="Alternar tema">
+          <i data-lucide="moon"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main id="conteudo" class="case-main">
+    <div class="container">
+      <header class="case-header" style="text-align: center;">
+        <p class="case-num">404</p>
+        <h1 class="case-title">Página não encontrada</h1>
+        <p class="case-meta" style="justify-content: center;">
+          <span>O endereço que você tentou acessar não existe ou foi movido.</span>
+        </p>
+      </header>
+
+      <div class="case-footer-cta" style="justify-content: center;">
+        <a href="/" class="btn btn-primary">
+          <i data-lucide="arrow-left"></i> Voltar para o início
+        </a>
+      </div>
+
+      <footer class="container site-footer flex flex-wrap justify-between">
+        <span>© <span id="year"></span> Douglas Santana Mendonça</span>
+        <span>Todos os direitos reservados</span>
+      </footer>
+    </div>
+  </main>
+
+  <script src="js/script.js"></script>
+</body>
+</html>

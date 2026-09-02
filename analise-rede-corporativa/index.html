@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Análise de Rede Corporativa — Douglas Santana Mendonça</title>
   <meta name="description" content="Estudo de caso de análise de rede corporativa: captura e análise de tráfego com Wireshark para diagnosticar a causa raiz de uma instabilidade recorrente na rede." />
-  <link rel="icon" href="../favicon.ico" />
+  <link rel="icon" href="../ico/favicon.ico" />
+  <link rel="canonical" href="https://sm-douglas.github.io/analise-rede-corporativa/" />
 
   <!-- Fontes -->
   <link rel="preconnect" href="https://fonts.googleapis.com" />
@@ -15,9 +16,9 @@
   <!-- Ícones (Lucide via CDN) -->
   <script src="https://unpkg.com/lucide@1.39.0" crossorigin="anonymous"></script>
 
-  <link rel="stylesheet" href="../style.css" />
+  <link rel="stylesheet" href="../css/style.css" />
 
-  <!-- Tema (claro/escuro): aplicado antes da renderização para evitar "flash" -->
+  <!-- Tema (claro/escuro): aplicado antes do render para evitar "flash" -->
   <script>
     (function () {
       try {
@@ -29,21 +30,22 @@
   </script>
 </head>
 <body>
+  <a href="#conteudo" class="skip-link">Pular para o conteúdo</a>
   <!-- ================= NAVBAR ================= -->
   <header id="navbar" class="navbar">
     <nav class="nav container flex items-center justify-between">
-      <a href="../index.html#top" class="brand flex items-center">
+      <a href="../" class="brand flex items-center">
         <span class="brand-name">Douglas Santana</span>
         <span class="brand-sep">· Mendonça</span>
       </a>
 
       <ul class="nav-links flex" id="navLinks">
-        <li><a href="../index.html#sobre" data-nav>Sobre</a></li>
-        <li><a href="../index.html#skills" data-nav>Competências</a></li>
-        <li><a href="../index.html#projetos" data-nav>Projetos</a></li>
-        <li><a href="../index.html#experiencia" data-nav>Experiência</a></li>
-        <li><a href="../index.html#contato" data-nav>Contato</a></li>
-        <li><a href="../curriculo.html">Currículo</a></li>
+        <li><a href="../#sobre" data-nav>Sobre</a></li>
+        <li><a href="../#skills" data-nav>Competências</a></li>
+        <li><a href="../#projetos" data-nav>Projetos</a></li>
+        <li><a href="../#experiencia" data-nav>Experiência</a></li>
+        <li><a href="../#contato" data-nav>Contato</a></li>
+        <li><a href="../curriculo/">Currículo</a></li>
       </ul>
 
       <div class="nav-actions flex items-center">
@@ -57,18 +59,18 @@
     </nav>
   </header>
 
-  <main class="case-main">
+  <main id="conteudo" class="case-main">
     <div class="container">
 
       <!-- Navegação de retorno -->
-      <a href="../index.html#projetos" class="case-back">
+      <a href="../#projetos" class="case-back">
         <i data-lucide="arrow-left"></i> Voltar para projetos
       </a>
 
       <!-- Cabeçalho do caso -->
       <header class="case-header">
         <p class="case-num">Case 03</p>
-        <h1 class="case-title">Análise de rede corporativa</h1>
+        <h1 class="case-title">Estudo de caso — Análise de rede corporativa</h1>
         <p class="case-meta">
           <span>2026</span>
           <span>Diagnóstico de rede</span>
@@ -88,7 +90,7 @@
       <section class="case-section">
         <h2>Contexto</h2>
         <p>
-          Durante o mesmo atendimento, foi identificado um problema recorrente
+          Durante o mesmo atendimento referente à perícia forense, foi identificado um problema recorrente
           de instabilidade na rede Wi-Fi do ambiente, impactando diretamente a
           produtividade da equipe. Sem visibilidade clara sobre a causa, não
           era possível saber se o problema tinha origem em um incidente de
@@ -145,7 +147,7 @@
         <p>
           A análise confirmou que a instabilidade não tinha origem em ataque
           ou anomalia de segurança, mas sim em limitações do roteador da
-          rede — evidenciadas pelos padrões de TCP Zero Window, Duplicate ACK
+          rede, evidenciadas pelos padrões de TCP Zero Window, Duplicate ACK
           e RST recorrentes durante os períodos de maior tráfego. A
           recomendação técnica de substituição do equipamento de rede
           eliminou o gargalo identificado, restaurando a estabilidade da
@@ -155,7 +157,7 @@
 
       <!-- Rodapé do caso -->
       <div class="case-footer-cta">
-        <a href="../index.html#projetos" class="btn btn-outline">
+        <a href="../#projetos" class="btn btn-outline">
           <i data-lucide="arrow-left"></i> Ver todos os projetos
         </a>
       </div>
@@ -167,6 +169,6 @@
     </div>
   </main>
 
-  <script src="../script.js"></script>
+  <script src="../js/script.js"></script>
 </body>
 </html>
