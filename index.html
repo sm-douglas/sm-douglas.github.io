@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Douglas Santana Mendonça — TI & Cibersegurança</title>
+  <meta name="description" content="Portfólio de Douglas Santana Mendonça — Suporte de TI, Segurança da Informação e Análise de Dados. Consultor independente para clientes corporativos e jurídicos." />
+  <link rel="icon" href="favicon.ico" />
+
+  <!-- Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Ícones (Lucide via CDN) -->
+  <script src="https://unpkg.com/lucide@1.39.0" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Tema (claro/escuro): aplicado antes da renderização para evitar "flash" -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("theme");
+        if (!t) t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        document.documentElement.setAttribute("data-theme", t);
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <!-- ================= NAVBAR ================= -->
+  <header id="navbar" class="navbar">
+    <nav class="nav container flex items-center justify-between">
+      <a href="#top" class="brand flex items-center">
+        <span class="brand-name">Douglas Santana</span>
+        <span class="brand-sep">· Mendonça</span>
+      </a>
+
+      <ul class="nav-links flex" id="navLinks">
+        <li><a href="#sobre" data-nav>Sobre</a></li>
+        <li><a href="#skills" data-nav>Competências</a></li>
+        <li><a href="#projetos" data-nav>Projetos</a></li>
+        <li><a href="#experiencia" data-nav>Experiência</a></li>
+        <li><a href="#contato" data-nav>Contato</a></li>
+        <li><a href="curriculo.html">Currículo</a></li>
+      </ul>
+
+      <div class="nav-actions flex items-center">
+        <button id="themeToggle" class="icon-btn" type="button" aria-label="Alternar tema">
+          <i data-lucide="moon"></i>
+        </button>
+        <button id="menuToggle" class="menu-toggle icon-btn" aria-label="Abrir menu">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+
+  <main>
+    <!-- ================= HERO ================= -->
+    <section id="top" class="hero">
+      <div class="container hero-grid flex flex-wrap">
+        <div class="hero-text fade-in-up">
+          <p class="eyebrow flex items-center"><span class="line"></span> Portfólio · 2026</p>
+          <h1 class="display">
+            Douglas Santana <em>Mendonça</em>
+          </h1>
+          <p class="lead">
+            Suporte de TI <span class="dot">·</span> Segurança da Informação
+            <span class="dot">·</span> Análise de Dados.
+          </p>
+          <p class="body-muted">
+            Consultor independente e técnico N1–N3. Atuo com infraestrutura de
+            redes, análise forense digital, OSINT e adequação à LGPD para
+            clientes corporativos e escritórios de advocacia.
+          </p>
+
+          <div class="cta-row flex flex-wrap">
+            <a href="#contato" class="btn btn-primary">
+              Entrar em contato <i data-lucide="arrow-right"></i>
+            </a>
+            <a href="curriculo.html" class="btn btn-outline">
+              <i data-lucide="download"></i> Baixar CV
+            </a>
+          </div>
+        </div>
+
+        <div class="hero-photo fade-in-up">
+          <!--
+            Foto de retrato principal.
+            Recomendado: 1024x1280 (4:5), formato .jpg ou .webp.
+            Substituir: portfolio-static/assets/foto-hero.jpg
+          -->
+          <figure>
+            <div class="photo-frame"></div>
+            <img src="assets/foto-hero.jpg" alt="Retrato de Douglas Santana Mendonça" width="1024" height="1280" />
+          </figure>
+        </div>
+      </div>
+
+      <div class="container stats flex flex-wrap">
+        <div class="stat"><p class="stat-value">2+</p><p class="stat-label">Anos de atuação</p></div>
+        <div class="stat"><p class="stat-value">Blue Team</p><p class="stat-label">Foco</p></div>
+        <div class="stat"><p class="stat-value">ADS · IFES</p><p class="stat-label">Formação</p></div>
+        <div class="stat"><p class="stat-value">Certificação</p><p class="stat-label">em Cybersegurança</p></div>
+      </div>
+    </section>
+
+    <!-- ================= SOBRE ================= -->
+    <section id="sobre" class="section">
+      <div class="container">
+        <p class="section-label"><span>01</span> Sobre</p>
+
+        <div class="about-grid flex flex-wrap">
+          <div class="about-photo">
+            <!--
+              Foto secundária (mais informal / lifestyle).
+              Recomendado: 900x1050 (6:7). Substituir: portfolio-static/assets/foto-sobre.jpg
+            -->
+            <figure>
+              <img src="assets/foto-sobre.jpg" alt="Douglas Santana em ambiente profissional" loading="lazy" width="900" height="1050" />
+              <figcaption>Escritório · Vitória, ES</figcaption>
+            </figure>
+          </div>
+          <div class="about-text">
+            <h2 class="h-serif">
+                Ajudando escritórios e empresas a operar com segurança e confiança.
+            </h2>
+            <p>
+              Trabalho como consultor independente e técnico de suporte N1 à N3, com foco em
+              infraestrutura, análise forense digital e adequação à LGPD. Atendo escritórios
+              de advocacia, pequenas empresas e projetos corporativos que precisam de um
+              parceiro técnico discreto e confiável.
+            </p>
+            <p>
+              Estou cursando Análise e Desenvolvimento de Sistemas no IFES e Técnico em
+              Desenvolvimento de Sistemas pelo SENAC. Interesse contínuo em Blue Team,
+              resposta a incidentes e investigação digital baseada em OSINT.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= SKILLS ================= -->
+    <section id="skills" class="section alt">
+      <div class="container">
+        <p class="section-label"><span>02</span> Competências</p>
+
+        <div class="skills-grid flex flex-wrap">
+          <div class="skill-card">
+            <h3>Infraestrutura & Redes</h3>
+            <ul class="flex">
+              <li>TCP/IP</li><li>VLANs</li><li>Firewall</li><li>VPN</li>
+              <li>Active Directory</li><li>Windows Server</li><li>Linux</li>
+            </ul>
+          </div>
+          <div class="skill-card">
+            <h3>Segurança & Forense</h3>
+            <ul class="flex">
+              <li>Autopsy</li><li>FTK Imager</li><li>Wireshark</li><li>OSINT</li>
+              <li>LGPD</li><li>Blue Team</li><li>Incident Response</li>
+            </ul>
+          </div>
+          <div class="skill-card">
+            <h3>Linguagens</h3>
+            <ul class="flex">
+              <li>Python</li><li>JavaScript</li><li>SQL</li><li>C</li><li>Bash</li>
+            </ul>
+          </div>
+          <div class="skill-card">
+            <h3>Ferramentas</h3>
+            <ul class="flex">
+              <li>Freshdesk</li><li>Jira</li><li>Trello</li><li>Git</li>
+              <li>GitHub</li><li>VS Code</li><li>Docker</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ================= PROJETOS ================= -->
+    <section id="projetos" class="section">
+      <div class="container">
+        <p class="section-label"><span>03</span> Projetos selecionados</p>
+
+        <ul class="projects">
+          <li>
+            <a href="https://github.com/sm-douglas/osint-recon-cli" target="_blank" rel="noopener noreferrer" class="project-row flex flex-wrap">
+              <span class="p-num">01</span>
+              <div class="p-body">
+                <h3>OSINT Recon CLI <i data-lucide="arrow-up-right"></i></h3>
+                <p>Ferramenta em Python para reconhecimento passivo: enumeração de subdomínios, coleta de metadados e agregação de fontes públicas em relatório único.</p>
+              </div>
+              <div class="p-tags flex"><span>Python</span><span>OSINT</span><span>CLI</span></div>
+            </a>
+          </li>
+          <li>
+            <a href="casos/pericia-forense.html" class="project-row flex flex-wrap">
+              <span class="p-num">02</span>
+              <div class="p-body">
+                <h3>Estudo de caso — Perícia forense <i data-lucide="arrow-up-right"></i></h3>
+                <p>Aquisição de imagem com FTK Imager, análise com Autopsy e produção de laudo técnico. Dados sensibilizados para publicação.</p>
+              </div>
+              <div class="p-tags flex"><span>Autopsy</span><span>FTK Imager</span><span>Laudo pericial</span></div>
+            </a>
+          </li>
+          <li>
+            <a href="casos/analise-rede-corporativa.html" class="project-row flex flex-wrap">
+              <span class="p-num">03</span>
+              <div class="p-body">
+                <h3>Análise de rede corporativa <i data-lucide="arrow-up-right"></i></h3>
+                <p>Captura e análise de tráfego com Wireshark para identificar anomalias e vazamento de credenciais em ambiente Windows / Active Directory.</p>
+              </div>
+              <div class="p-tags flex"><span>Wireshark</span><span>Active Directory</span><span>Blue Team</span></div>
+            </a>
+          </li>
+          <li>
+            <a href="https://github.com/sm-douglas/display-affinity-detector" target="_blank" rel="noopener noreferrer" class="project-row flex flex-wrap">
+              <span class="p-num">04</span>
+              <div class="p-body">
+                <h3>Display Affinity Detector<i data-lucide="arrow-up-right"></i></h3>
+                <p>Ferramenta para identificar, em tempo real, quais janelas do Windows estão protegidas contra captura de tela via SetWindowDisplayAffinity (WDA_EXCLUDEFROMCAPTURE / WDA_MONITOR).</p>
+              </div>
+              <div class="p-tags flex"><span>LGPD</span><span>Compliance</span><span>GRC</span></div>
+            </a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+    <!-- ================= EXPERIÊNCIA ================= -->
+    <section id="experiencia" class="section alt">
+      <div class="container">
+        <p class="section-label"><span>04</span> Experiência</p>
+
+        <ol class="timeline flex">
+          <li class="flex flex-wrap">
+            <p class="period timeline-period">2023 — presente</p>
+            <div class="timeline-content">
+              <h3>Consultor Independente — TI & Cibersegurança</h3>
+              <p class="org">Clientes jurídicos e corporativos</p>
+              <ul class="flex">
+                <li>Perícia forense digital e produção de laudos técnicos para processos judiciais.</li>
+                <li>Adequação à LGPD e resposta a incidentes em escritórios de advocacia.</li>
+              </ul>
+            </div>
+          </li>
+          <li class="flex flex-wrap">
+            <p class="period timeline-period">2022 — presente</p>
+            <div class="timeline-content">
+              <h3>Técnico de Suporte de TI (N1–N3)</h3>
+              <p class="org">Ambientes corporativos</p>
+              <ul class="flex">
+                <li>Suporte a estações, servidores Windows/Linux e Active Directory.</li>
+                <li>Gestão de chamados via Freshdesk e Jira, com foco em SLA e documentação.</li>
+              </ul>
+            </div>
+          </li>
+          <li class="flex flex-wrap">
+            <p class="period timeline-period">2023 — presente</p>
+            <div class="timeline-content">
+              <h3>Analista de OSINT & Investigação Digital</h3>
+              <p class="org">Projetos sob NDA</p>
+              <ul class="flex">
+                <li>Coleta e correlação de fontes abertas para investigações preliminares.</li>
+                <li>Scripts em Python para automatizar reconhecimento e enriquecimento de dados.</li>
+              </ul>
+            </div>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <!-- ================= CONTATO ================= -->
+    <section id="contato" class="section">
+      <div class="container contact-grid flex flex-wrap">
+        <div class="contact-info">
+          <p class="section-label"><span>05</span> Contato</p>
+          <h2 class="h-serif mt-lg">Vamos conversar sobre o próximo projeto.</h2>
+          <p class="body-muted">
+            Consultoria, suporte contínuo, perícia digital ou adequação à LGPD.
+            Respondo em até 24 horas úteis, com escopo claro e comunicação direta.
+          </p>
+
+          <div class="contact-links flex">
+            <a href="mailto:contato.smdouglas@gmail.com" class="flex items-center justify-between"><i data-lucide="mail"></i> contato.smdouglas@gmail.com <span>→</span></a>
+            <a href="https://www.linkedin.com/in/douglas-santana-8b5263222" class="flex items-center justify-between"><i data-lucide="linkedin"></i> LinkedIn <span>→</span></a>
+            <a href="https://github.com/sm-douglas" class="flex items-center justify-between"><i data-lucide="github"></i> GitHub <span>→</span></a>
+          </div>
+        </div>
+
+        <div class="contact-channels">
+          <p class="channels-title">Canais diretos</p>
+          <p class="body-muted">
+            Prefiro conversas objetivas: envie um e-mail com o contexto da
+            necessidade ou chame no LinkedIn.
+          </p>
+          <div class="channels-actions flex flex-wrap">
+            <a href="mailto:contato.smdouglas@gmail.com" class="btn btn-primary">
+              <i data-lucide="mail"></i> Enviar e-mail
+            </a>
+            <a href="https://www.linkedin.com/in/douglas-santana-8b5263222" target="_blank" rel="noopener" class="btn btn-outline">
+              <i data-lucide="linkedin"></i> Falar no LinkedIn
+            </a>
+          </div>
+        </div>
+
+      </div>
+
+      <footer class="container site-footer flex flex-wrap justify-between">
+        <span>© <span id="year"></span> Douglas Santana Mendonça</span>
+        <span>Todos os direitos reservados</span>
+      </footer>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Análise de Rede Corporativa — Douglas Santana Mendonça</title>
+  <meta name="description" content="Estudo de caso de análise de rede corporativa: captura e análise de tráfego com Wireshark para diagnosticar a causa raiz de uma instabilidade recorrente na rede." />
+  <link rel="icon" href="../favicon.ico" />
+
+  <!-- Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Ícones (Lucide via CDN) -->
+  <script src="https://unpkg.com/lucide@1.39.0" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="../style.css" />
+
+  <!-- Tema (claro/escuro): aplicado antes da renderização para evitar "flash" -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("theme");
+        if (!t) t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        document.documentElement.setAttribute("data-theme", t);
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <!-- ================= NAVBAR ================= -->
+  <header id="navbar" class="navbar">
+    <nav class="nav container flex items-center justify-between">
+      <a href="../index.html#top" class="brand flex items-center">
+        <span class="brand-name">Douglas Santana</span>
+        <span class="brand-sep">· Mendonça</span>
+      </a>
+
+      <ul class="nav-links flex" id="navLinks">
+        <li><a href="../index.html#sobre" data-nav>Sobre</a></li>
+        <li><a href="../index.html#skills" data-nav>Competências</a></li>
+        <li><a href="../index.html#projetos" data-nav>Projetos</a></li>
+        <li><a href="../index.html#experiencia" data-nav>Experiência</a></li>
+        <li><a href="../index.html#contato" data-nav>Contato</a></li>
+        <li><a href="../curriculo.html">Currículo</a></li>
+      </ul>
+
+      <div class="nav-actions flex items-center">
+        <button id="themeToggle" class="icon-btn" type="button" aria-label="Alternar tema">
+          <i data-lucide="moon"></i>
+        </button>
+        <button id="menuToggle" class="menu-toggle icon-btn" aria-label="Abrir menu">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="case-main">
+    <div class="container">
+
+      <!-- Navegação de retorno -->
+      <a href="../index.html#projetos" class="case-back">
+        <i data-lucide="arrow-left"></i> Voltar para projetos
+      </a>
+
+      <!-- Cabeçalho do caso -->
+      <header class="case-header">
+        <p class="case-num">Case 03</p>
+        <h1 class="case-title">Análise de rede corporativa</h1>
+        <p class="case-meta">
+          <span>2026</span>
+          <span>Diagnóstico de rede</span>
+          <span>Ambiente corporativo</span>
+        </p>
+      </header>
+
+      <!-- Resumo -->
+      <section class="case-section case-resumo">
+        <p>
+          Captura e análise de tráfego com Wireshark para diagnosticar a causa
+          raiz de uma instabilidade recorrente na rede corporativa.
+        </p>
+      </section>
+
+      <!-- Contexto -->
+      <section class="case-section">
+        <h2>Contexto</h2>
+        <p>
+          Durante o mesmo atendimento, foi identificado um problema recorrente
+          de instabilidade na rede Wi-Fi do ambiente, impactando diretamente a
+          produtividade da equipe. Sem visibilidade clara sobre a causa, não
+          era possível saber se o problema tinha origem em um incidente de
+          segurança ou em uma limitação de infraestrutura. O objetivo do
+          trabalho foi diagnosticar, com base em análise de tráfego, a causa
+          raiz da instabilidade.
+        </p>
+      </section>
+
+      <!-- Metodologia -->
+      <section class="case-section">
+        <h2>Metodologia / processo</h2>
+        <ol class="case-steps">
+          <li>
+            <div>
+              <h3>Captura de tráfego</h3>
+              <p>Sessões de captura com Wireshark realizadas durante os períodos de instabilidade reportados pelos usuários, cobrindo horário comercial e picos de uso.</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h3>Script de auditoria customizado</h3>
+              <p>Desenvolvimento de um script Lua para o Wireshark, automatizando a auditoria de IPs e conexões durante a análise das capturas.</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h3>Identificação de padrões</h3>
+              <p>Reconhecimento de indicadores clássicos de degradação de rede: TCP Zero Window, Duplicate ACK e pacotes RST recorrentes ao longo das capturas.</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h3>Correlação com hardware e recomendação</h3>
+              <p>Cruzamento dos padrões identificados com o comportamento do equipamento de rede, isolando a causa como limitação do roteador em uso, e consolidação dos achados em relatório técnico.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <!-- Ferramentas -->
+      <section class="case-section">
+        <h2>Ferramentas utilizadas</h2>
+        <div class="case-badges">
+          <span>Wireshark</span>
+          <span>Diagnóstico de Rede</span>
+          <span>Blue Team</span>
+        </div>
+      </section>
+
+      <!-- Resultado -->
+      <section class="case-section">
+        <h2>Resultado / conclusão</h2>
+        <p>
+          A análise confirmou que a instabilidade não tinha origem em ataque
+          ou anomalia de segurança, mas sim em limitações do roteador da
+          rede — evidenciadas pelos padrões de TCP Zero Window, Duplicate ACK
+          e RST recorrentes durante os períodos de maior tráfego. A
+          recomendação técnica de substituição do equipamento de rede
+          eliminou o gargalo identificado, restaurando a estabilidade da
+          conexão para a equipe.
+        </p>
+      </section>
+
+      <!-- Rodapé do caso -->
+      <div class="case-footer-cta">
+        <a href="../index.html#projetos" class="btn btn-outline">
+          <i data-lucide="arrow-left"></i> Ver todos os projetos
+        </a>
+      </div>
+
+      <footer class="container site-footer flex flex-wrap justify-between">
+        <span>© <span id="year"></span> Douglas Santana Mendonça</span>
+        <span>Todos os direitos reservados</span>
+      </footer>
+    </div>
+  </main>
+
+  <script src="../script.js"></script>
+</body>
+</html>

@@ -1,0 +1,183 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Perícia Forense Digital — Douglas Santana Mendonça</title>
+  <meta name="description" content="Estudo de caso de perícia forense digital: aquisição de imagem com FTK Imager, análise com Autopsy e produção de laudo técnico para processo judicial." />
+  <link rel="icon" href="../favicon.ico" />
+
+  <!-- Fontes -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,wght@0,400;0,500;0,600;1,400&family=Inter:wght@300;400;500;600&display=swap" rel="stylesheet" />
+
+  <!-- Ícones (Lucide via CDN) -->
+  <script src="https://unpkg.com/lucide@1.39.0" crossorigin="anonymous"></script>
+
+  <link rel="stylesheet" href="../style.css" />
+
+  <!-- Tema (claro/escuro): aplicado antes da renderização para evitar "flash" -->
+  <script>
+    (function () {
+      try {
+        var t = localStorage.getItem("theme");
+        if (!t) t = window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
+        document.documentElement.setAttribute("data-theme", t);
+      } catch (e) {}
+    })();
+  </script>
+</head>
+<body>
+  <!-- ================= NAVBAR ================= -->
+  <header id="navbar" class="navbar">
+    <nav class="nav container flex items-center justify-between">
+      <a href="../index.html#top" class="brand flex items-center">
+        <span class="brand-name">Douglas Santana</span>
+        <span class="brand-sep">· Mendonça</span>
+      </a>
+
+      <ul class="nav-links flex" id="navLinks">
+        <li><a href="../index.html#sobre" data-nav>Sobre</a></li>
+        <li><a href="../index.html#skills" data-nav>Competências</a></li>
+        <li><a href="../index.html#projetos" data-nav>Projetos</a></li>
+        <li><a href="../index.html#experiencia" data-nav>Experiência</a></li>
+        <li><a href="../index.html#contato" data-nav>Contato</a></li>
+        <li><a href="../curriculo.html">Currículo</a></li>
+      </ul>
+
+      <div class="nav-actions flex items-center">
+        <button id="themeToggle" class="icon-btn" type="button" aria-label="Alternar tema">
+          <i data-lucide="moon"></i>
+        </button>
+        <button id="menuToggle" class="menu-toggle icon-btn" aria-label="Abrir menu">
+          <i data-lucide="menu"></i>
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <main class="case-main">
+    <div class="container">
+
+      <!-- Navegação de retorno -->
+      <a href="../index.html#projetos" class="case-back">
+        <i data-lucide="arrow-left"></i> Voltar para projetos
+      </a>
+
+      <!-- Cabeçalho do caso -->
+      <header class="case-header">
+        <p class="case-num">Case 02</p>
+        <h1 class="case-title">Estudo de caso — Perícia forense digital</h1>
+        <p class="case-meta">
+          <span>2026</span>
+          <span>Perícia forense</span>
+          <span>Ambiente corporativo</span>
+        </p>
+      </header>
+
+      <!-- Resumo -->
+      <section class="case-section case-resumo">
+        <p>
+          Aquisição de imagem com FTK Imager, análise com Autopsy e produção de
+          laudo técnico. Dados sensibilizados para publicação.
+        </p>
+      </section>
+
+      <!-- Contexto -->
+      <section class="case-section">
+        <h2>Contexto</h2>
+        <p>
+          O cliente reportou tentativas recorrentes de acesso não autorizado a
+          contas pessoais de e-mail e redes sociais, levantando suspeita de
+          comprometimento do notebook corporativo utilizado no dia a dia. O
+          objetivo da perícia foi determinar, com rigor técnico, se o
+          dispositivo apresentava evidências de infecção por malware, spyware,
+          keylogger ou acesso remoto não autorizado.
+        </p>
+      </section>
+
+      <!-- Metodologia -->
+      <section class="case-section">
+        <h2>Metodologia / processo</h2>
+        <ol class="case-steps">
+          <li>
+            <div>
+              <h3>Triagem inicial</h3>
+              <p>Mapeamento de processos ativos e itens de inicialização com Autoruns e Process Explorer, comparando cada entrada com assinaturas digitais válidas e caminhos padrão do sistema operacional.</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h3>Análise de conexões de rede</h3>
+              <p>Captura de tráfego com TCPView e Wireshark, em busca de conexões externas suspeitas, dados não criptografados ou padrões característicos de exfiltração.</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h3>Aquisição forense da imagem de disco</h3>
+              <p>Criação de imagem em formato E01 com o FTK Imager, com cálculo e verificação de hashes de integridade (MD5/SHA-1/SHA-256) e transferência por canal criptografado (FTPES) até uma estação de análise dedicada.</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h3>Análise técnica aprofundada</h3>
+              <p>Exame da imagem no Autopsy: timeline analysis, keyword search, recuperação de arquivos excluídos e análise de metadata/artefatos do sistema operacional.</p>
+            </div>
+          </li>
+          <li>
+            <div>
+              <h3>Produção do laudo técnico</h3>
+              <p>Redação do laudo com metodologia, causa raiz, evidências e recomendações de segurança, em linguagem acessível a partes não técnicas.</p>
+            </div>
+          </li>
+        </ol>
+      </section>
+
+      <!-- Ferramentas -->
+      <section class="case-section">
+        <h2>Ferramentas utilizadas</h2>
+        <div class="case-badges">
+          <span>Autopsy</span>
+          <span>FTK Imager</span>
+          <span>Laudo pericial</span>
+        </div>
+      </section>
+
+      <!-- Resultado -->
+      <section class="case-section">
+        <h2>Resultado / conclusão</h2>
+        <p>
+          Não foi encontrada nenhuma evidência de malware, spyware, keylogger
+          ou acesso remoto não autorizado no dispositivo — os itens
+          inicialmente sinalizados como suspeitos corresponderam, após
+          verificação individual, a arquivos legítimos de fabricante e do
+          próprio sistema operacional. A causa mais provável das tentativas de
+          acesso indevido foi credenciais expostas em vazamento de dados de
+          terceiros, usadas em ataques automatizados de credential stuffing
+          contra as contas pessoais — sem relação com o dispositivo físico
+          analisado. O laudo técnico foi entregue documentando formalmente a
+          ausência de comprometimento do equipamento, acompanhado de
+          recomendações de segurança: troca de senhas das contas afetadas,
+          ativação de autenticação multifator e boas práticas de higiene
+          digital.
+        </p>
+      </section>
+
+      <!-- Rodapé do caso -->
+      <div class="case-footer-cta">
+        <a href="../index.html#projetos" class="btn btn-outline">
+          <i data-lucide="arrow-left"></i> Ver todos os projetos
+        </a>
+      </div>
+
+      <footer class="container site-footer flex flex-wrap justify-between">
+        <span>© <span id="year"></span> Douglas Santana Mendonça</span>
+        <span>Todos os direitos reservados</span>
+      </footer>
+    </div>
+  </main>
+
+  <script src="../script.js"></script>
+</body>
+</html>
